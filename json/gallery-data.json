@@ -1,0 +1,19 @@
+{
+    "artworks": [
+        {
+            "title": "감정의 파동",
+            "description": "감정의 변화를 시각화한 AI 아트워크",
+            "image": "images/art1.png"
+        },
+        {
+            "title": "코드의 선율",
+            "description": "음악과 코드의 조화를 표현한 작품",
+            "image": "images/art2.png"
+        },
+        {
+            "title": "감성의 유물",
+            "description": "감정 데이터를 기반으로 생성된 디지털 아트",
+            "image": "images/art3.png"
+        }
+    ]
+}

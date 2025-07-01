@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sora Kim의 포트폴리오. AI 명언 카드와 AI 그림 갤러리 등 창의적인 디지털 아트 작품들을 소개합니다.">
+    <meta name="keywords" content="디지털 아티스트, 포트폴리오, AI 아트, 미디어아트, Sora Kim">
+    <meta name="author" content="Sora Kim">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Sora Kim - 포트폴리오">
+    <meta property="og:description" content="Sora Kim의 포트폴리오. AI 명언 카드와 AI 그림 갤러리 등 창의적인 디지털 아트 작품들을 소개합니다.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="../images/art1.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sora Kim - 포트폴리오">
+    <meta name="twitter:description" content="Sora Kim의 포트폴리오. AI 명언 카드와 AI 그림 갤러리 등 창의적인 디지털 아트 작품들을 소개합니다.">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+    <title>Sora Kim - 포트폴리오</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/quotes.js"></script>
+    <script src="../js/script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-paint-brush"></i>
+                <span>Sora</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">소개</a></li>
+                <li><a href="interest.html">관심사</a></li>
+                <li><a href="portfolio.html" class="active">포트폴리오</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="portfolio-section">
+            <!-- AI 명언 카드 -->
+            <div class="ai-quote-card">
+                <h3>AI 명언 카드</h3>
+                <div class="quote-container">
+                    <div id="quoteText"></div>
+                    <div id="quoteAuthor"></div>
+                    <button id="newQuoteButton">새 명언 보기</button>
+                </div>
+            </div>
+
+            <!-- AI 그림 갤러리 -->
+            <div class="gallery-card gallery-container">
+                <div class="gallery-title">
+                    <h3>AI 그림 갤러리</h3>
+                </div>
+                <div class="gallery-grid" id="galleryGrid"></div>
+            </div>
+
+            <!-- 투표 폼 -->
+            <div class="vote-form">
+                <h3>가장 마음에 드는 기능을 선택해 주세요!</h3>
+                <form id="voteForm">
+                    <div class="vote-options">
+                        <label>
+                            <input type="radio" name="favorite" value="quote" required>
+                            <span>AI 명언 카드</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="favorite" value="gallery">
+                            <span>AI 그림 갤러리</span>
+                        </label>
+                    </div>
+                    <button type="submit">투표하기</button>
+                </form>
+                <div class="vote-results" id="voteResults">
+                    <div class="result-item" id="quoteResult">
+                        <span>AI 명언 카드</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 0%"></div>
+                        </div>
+                        <span class="percentage">0%</span>
+                    </div>
+                    <div class="result-item" id="galleryResult">
+                        <span>AI 그림 갤러리</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 0%"></div>
+                        </div>
+                        <span class="percentage">0%</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Sora Kim. All rights reserved.</p>
+    </footer>
+
+    <div class="page-nav prev-page">
+        <button onclick="location.href='interest.html'">&lt;</button>
+    </div>
+    <div class="page-nav next-page">
+        <button onclick="location.href='../index.html'">&gt;</button>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
