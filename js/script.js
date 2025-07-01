@@ -65,6 +65,23 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
+        // 모달 초기화
+        const modal = document.getElementById('imageModal');
+        const closeBtn = document.querySelector('.close-btn');
+        const modalImage = document.getElementById('modalImage');
+
+        // 모달 닫기 이벤트
+        closeBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        // 모달 외부 클릭 시 닫기
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
         // AI 그림 갤러리 초기화
         fetch('../json/gallery-data.json')
             .then(response => response.json())
@@ -74,13 +91,22 @@ document.addEventListener('DOMContentLoaded', () => {
                     const card = document.createElement('div');
                     card.className = 'gallery-card';
                     card.innerHTML = `
-                        <img src="../${artwork.image}" alt="${artwork.title}">
+                        <img src="../${artwork.image}" alt="${artwork.title}" class="gallery-image">
                         <div class="gallery-card-info">
                             <h4>${artwork.title}</h4>
                             <p>${artwork.description}</p>
                         </div>
                     `;
                     galleryGrid.appendChild(card);
+
+                    // 이미지 클릭 이벤트
+                    const img = card.querySelector('.gallery-image');
+                    console.log('이미지 요소:', img);
+                    img.addEventListener('click', () => {
+                        console.log('이미지 클릭됨:', artwork.image);
+                        modalImage.src = `../${artwork.image}`;
+                        modal.style.display = 'block';
+                    });
                 });
             })
             .catch(error => console.error('Error loading gallery data:', error));
