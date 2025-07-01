@@ -18,54 +18,59 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
     <title>Sora Kim - 관심사</title>
-    <script src="../js/interest.js"></script>
-    <script src="../js/script.js"></script>
-    <script src="../js/quotes.js"></script>
-    <script src="../js/components/componentLoader.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            ComponentLoader.load('nav', 'nav-container');
-        });
-    </script>
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/interest.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <!-- Navigation will be loaded here -->
     <div id="nav-container"></div>
 
-    <main>
-        <section class="interests-section">
-            <h2>관심사</h2>
-            <div class="interest-cards">
-                <div class="interest-card">
-                    <i class="fas fa-music"></i>
-                    <h3>음악과 감정 코드화</h3>
-                    <p>음악의 감정을 코드로 표현하는 프로젝트를 진행 중입니다. AI를 활용하여 음악의 감정을 시각화하고 있습니다.</p>
-                    <button class="more-btn">자세히 보기</button>
-                </div>
-                
-                <div class="interest-card">
-                    <i class="fas fa-palette"></i>
-                    <h3>AI 그림</h3>
-                    <p>AI를 활용한 디지털 아트 작업에 관심이 있습니다. 감정을 반영한 AI 이미지 생성 프로젝트를 진행 중입니다.</p>
-                    <button class="more-btn">자세히 보기</button>
-                </div>
-                
-                <div class="interest-card">
-                    <i class="fas fa-gamepad"></i>
-                    <h3>감정 기반 게임 제작</h3>
-                    <p>사용자의 감정을 반영하는 인터랙티브 게임을 개발하고 있습니다. 감정 인식 기술을 활용하여 새로운 게임 경험을 창조합니다.</p>
-                    <button class="more-btn">자세히 보기</button>
-                </div>
+    <main class="interests-container">
+        <h1>관심사</h1>
+        
+        <!-- 검색 및 정렬 컨트롤 -->
+        <div class="controls">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="검색어를 입력하세요...">
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
             </div>
-        </section>
+            <div class="sort-controls">
+                <select id="sortSelect" class="sort-select">
+                    <option value="title-asc">제목 (오름차순)</option>
+                    <option value="title-desc">제목 (내림차순)</option>
+                </select>
+            </div>
+        </div>
+        
+        <!-- 태그 필터 -->
+        <div class="tag-filters" id="tagFilters">
+            <!-- 태그 버튼이 여기에 동적으로 생성됩니다 -->
+        </div>
+        
+        <!-- 관심사 목록 -->
+        <div class="interests-grid" id="interestsGrid">
+            <!-- 여기에 관심사 카드들이 동적으로 로드됩니다 -->
+            <div class="loading">로딩 중...</div>
+        </div>
+        
+        <!-- 페이지네이션 -->
+        <div class="pagination" id="pagination">
+            <!-- 페이지네이션 버튼이 여기에 동적으로 생성됩니다 -->
+        </div>
     </main>
 
     <footer>
         <p>&copy; 2025 Sora Kim. All rights reserved.</p>
     </footer>
 
-    <!-- 페이지네이션은 자동으로 로드됩니다 -->
+    <!-- 스크립트 -->
+    <script src="../js/components/componentLoader.js"></script>
+    <script src="../js/interest.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            ComponentLoader.load('nav', 'nav-container');
+        });
+    </script>
 </body>
 </html>
