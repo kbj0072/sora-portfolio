@@ -21,23 +21,18 @@
     <script src="../js/interest.js"></script>
     <script src="../js/script.js"></script>
     <script src="../js/quotes.js"></script>
+    <script src="../js/components/componentLoader.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            ComponentLoader.load('nav', 'nav-container');
+        });
+    </script>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-            <div class="nav-logo">
-                <i class="fas fa-paint-brush"></i>
-                <span>Sora</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="../index.html">소개</a></li>
-                <li><a href="interest.html" class="active">관심사</a></li>
-                <li><a href="portfolio.html">포트폴리오</a></li>
-            </ul>
-        </div>
-    </nav>
+    <!-- Navigation will be loaded here -->
+    <div id="nav-container"></div>
 
     <main>
         <section class="interests-section">
@@ -71,11 +66,6 @@
         <p>&copy; 2025 Sora Kim. All rights reserved.</p>
     </footer>
 
-    <div class="page-nav prev-page">
-        <button onclick="location.href='../index.html'">&lt;</button>
-    </div>
-    <div class="page-nav next-page">
-        <button onclick="location.href='portfolio.html'">&gt;</button>
-    </div>
+    <!-- 페이지네이션은 자동으로 로드됩니다 -->
 </body>
 </html>

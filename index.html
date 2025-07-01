@@ -17,27 +17,27 @@
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
-    <title>Sora Kim - 감성을 코드로 표현하는 사람</title>
+    <title>Sora Kim - 디지털 아티스트</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- 컴포넌트 로더를 먼저 로드 -->
+    <script src="js/components/componentLoader.js"></script>
+    <script>
+        // DOM이 완전히 로드된 후에 컴포넌트 로드
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('DOM fully loaded, loading nav component...');
+            ComponentLoader.load('nav', 'nav-container').catch(error => {
+                console.error('컴포넌트 로드 중 오류 발생:', error);
+            });
+        });
+    </script>
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-            <div class="nav-logo">
-                <i class="fas fa-paint-brush"></i>
-                <span>Sora</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">소개</a></li>
-                <li><a href="pages/interest.html">관심사</a></li>
-                <li><a href="pages/portfolio.html">포트폴리오</a></li>
-            </ul>
-        </div>
-    </nav>
+    <!-- Navigation will be loaded here -->
+    <div id="nav-container"></div>
 
     <main>
-        <section class="hero">
+        <section class="hero hero-bg">
             <div class="profile-container">
                 <img src="images/profile.png" alt="Sora Kim" class="profile-image">
                 <h1>안녕하세요,<br>감성 + 코딩을 좋아하는 Sora입니다</h1>

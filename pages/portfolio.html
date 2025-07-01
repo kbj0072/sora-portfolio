@@ -24,19 +24,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-            <div class="nav-logo">
-                <i class="fas fa-paint-brush"></i>
-                <span>Sora</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="../index.html">소개</a></li>
-                <li><a href="interest.html">관심사</a></li>
-                <li><a href="portfolio.html" class="active">포트폴리오</a></li>
-            </ul>
-        </div>
-    </nav>
+    <!-- Navigation will be loaded here -->
+    <div id="nav-container"></div>
 
     <main>
         <section class="portfolio-section">
@@ -112,5 +101,12 @@
     </div>
 
     <script src="../js/script.js"></script>
+    <!-- Load components -->
+    <script src="../js/components/componentLoader.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            ComponentLoader.load('nav', 'nav-container');
+        });
+    </script>
 </body>
 </html>

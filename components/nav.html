@@ -1,0 +1,59 @@
+<style>
+    /* 네비게이션 스타일 */
+    nav {
+        background-color: white;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+    }
+    .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .nav-logo {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    .nav-logo a {
+        color: #4a90e2;
+        text-decoration: none;
+    }
+    .nav-links {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+    }
+    .nav-links a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+        color: #4a90e2;
+    }
+</style>
+
+<nav>
+    <div class="nav-container">
+        <div class="nav-logo">
+            <i class="fas fa-paint-brush"></i>
+            <a href="./index.html" id="nav-logo">Sora</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="./index.html" id="nav-home">소개</a></li>
+            <li><a href="./pages/interest.html" id="nav-interest">관심사</a></li>
+            <li><a href="./pages/portfolio.html" id="nav-portfolio">포트폴리오</a></li>
+        </ul>
+    </div>
+</nav>

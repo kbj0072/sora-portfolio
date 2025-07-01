@@ -17,6 +17,33 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--background-color);
+    padding-top: 80px; /* 네비게이션 높이만큼 패딩 추가 */
+    position: relative;
+}
+
+.hero-bg {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('https://cdn.pixabay.com/photo/2024/01/10/02/36/ai-generated-8498741_1280.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.7; /* 30% 불투명도로 조정 */
+    z-index: -1;
+}
+
+main {
+    position: relative;
+    z-index: 1;
 }
 
 /* Navigation */
@@ -69,7 +96,8 @@ nav {
 .hero {
     padding: 8rem 2rem 4rem;
     text-align: center;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    position: relative;
+    background: linear-gradient(135deg, rgba(245, 247, 250, 0.9) 0%, rgba(195, 207, 226, 0.9) 100%);
 }
 
 .profile-container {
