@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // AI 그림 갤러리 초기화
-        fetch('/json/gallery-data.json')
+        fetch('../json/gallery-data.json')
             .then(response => response.json())
             .then(data => {
                 const galleryGrid = document.getElementById('galleryGrid');
